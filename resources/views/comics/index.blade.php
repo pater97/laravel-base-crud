@@ -30,6 +30,11 @@
             <div class="button brand_bk py-2 px-4 fw-bold">
                 LOAD MORE
             </div>
+            <div class="button brand_bk py-2 px-4 fw-bold button_create">
+                <a href="{{route('comics.create')}}">
+                    CREATE NEW
+                </a>
+            </div>
         </div>
     </section>
     <!-- fascia blue  -->

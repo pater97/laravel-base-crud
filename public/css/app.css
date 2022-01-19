@@ -11333,6 +11333,13 @@ body {
   box-shadow: 0px 0px 5px 5px #0282F9;
   transition: ease-in-out all 0.5s;
 }
+#site_main .homepage .card_section .button_create a {
+  text-decoration: none;
+  color: white;
+}
+#site_main .homepage .card_section .button_create:hover a {
+  color: #0282F9;
+}
 #site_main .homepage .blue_option {
   padding: 2rem 0;
 }
