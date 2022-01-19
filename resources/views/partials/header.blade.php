@@ -19,7 +19,7 @@
                     <a href="">CHARACTERS</a>
                 </div>
                 <div>
-                    <a href="">COMICS</a>
+                    <a href="{{route('comics.index')}}">COMICS</a>
                 </div>
                 <div>
                     <a href="">MOVIES</a>

@@ -11350,6 +11350,116 @@ body {
   font-size: 0.8rem;
 }
 
+#show_page .hero_image {
+  height: 17rem;
+  background-image: url(../../img/jumbotron.jpg);
+  background-position: top;
+  background-size: cover;
+}
+#show_page .hero_image .container {
+  height: 100%;
+}
+#show_page .hero_image .container .card_section {
+  width: 9rem;
+  bottom: -2rem;
+}
+#show_page .hero_image .container .card_section:hover {
+  transform: translateY(-1rem);
+  transition: ease-in-out all 1s;
+}
+#show_page .hero_image .container .card_section .gallery, #show_page .hero_image .container .card_section .comic_book {
+  background-color: #00A9D9;
+  color: white;
+  font-size: 0.8rem;
+}
+#show_page .hero_image .container .card_section .gallery {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#show_page .blue_band {
+  height: 3rem;
+}
+#show_page .description h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+#show_page .description .green_bar {
+  background-color: #55BA59;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.7rem 1rem;
+}
+#show_page .description .green_bar .col-9, #show_page .description .green_bar .col-3 {
+  display: flex;
+  justify-content: space-between;
+}
+#show_page .description .green_bar .col-9 h5, #show_page .description .green_bar .col-3 h5 {
+  margin: 0;
+}
+#show_page .description .green_bar .col-9 span, #show_page .description .green_bar .col-3 span {
+  color: #ABED72;
+}
+#show_page .description .green_bar .col-9 i, #show_page .description .green_bar .col-3 i {
+  font-size: 0.7rem;
+}
+#show_page .description .green_bar .col-9 .col-3, #show_page .description .green_bar .col-3 .col-3 {
+  border-left: 1px solid black;
+}
+#show_page .description .text_descriton {
+  color: #5c5b5b;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+#show_page .ad {
+  text-align: end;
+}
+#show_page .ad img {
+  width: 14.5rem;
+}
+#show_page .ad h5 {
+  font-size: 1rem;
+  color: #353535;
+}
+#show_page .extra_info {
+  padding-bottom: 8rem;
+}
+#show_page .extra_info .art, #show_page .extra_info .writer, #show_page .extra_info .series {
+  color: #00A9D9;
+}
+#show_page .extra_info .art, #show_page .extra_info .writer, #show_page .extra_info .series, #show_page .extra_info .date, #show_page .extra_info .price {
+  font-size: 0.9rem;
+}
+#show_page .extra_info .price div:last-child, #show_page .extra_info .date div:last-child, #show_page .extra_info .series div:last-child {
+  text-align: end;
+}
+#show_page .icon_band {
+  border-top: 1px solid #a8a8a8;
+}
+#show_page .icon_band .col-md-3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #a8a8a8;
+  border-left: 1px solid #a8a8a8;
+  border-right: 1px solid #a8a8a8;
+}
+#show_page .icon_band .col-md-3:hover {
+  color: #00A9D9;
+  cursor: pointer;
+  border-left: 1px solid #00A9D9;
+  border-right: 1px solid #00A9D9;
+}
+#show_page .icon_band .col-md-3 h5 {
+  font-size: 1rem;
+}
+#show_page .icon_band .col-md-3 i {
+  font-size: 2rem;
+}
+
 .footer_link {
   background-image: url(../../img/footer-bg.jpg);
   background-size: cover;
