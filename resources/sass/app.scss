@@ -1,1 +1,153 @@
 @use 'bootstrap';
+
+/*variables*/
+$brandColor : #0282F9;
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+// header////////////////////////////////////////////
+
+// mini header blue 
+.blue_header{
+    padding: .3rem 0;
+    font-size: .5rem;
+    font-weight: bold;
+}
+// header con navbar 
+.navbar_header{
+    padding: 1rem 0;
+    height: 6rem;
+    // logo 
+    .logo{
+        width: 4rem;
+        img{
+            width: 100%;
+        }
+    }
+    // testo link 
+    nav{
+        div{
+            height: 6rem;
+            vertical-align: middle;
+            line-height: 6rem;
+            &:hover{
+                border-bottom:solid 4px $brandColor;
+            }
+            &:hover a{
+                color: $brandColor;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                margin: 0 1rem;
+                font-size: .7rem;
+                font-weight: bold;
+            }
+            i{
+                color: $brandColor;
+            }
+        }
+    }
+    // input
+    input{
+        border: none;
+        border-bottom: 2px solid $brandColor;
+        text-align: end;
+        width: 8rem;
+    }
+}
+
+
+// footer///////////////////////////////////
+// prima parte del footer con link 
+.footer_link{
+    background-image: url(../../img/footer-bg.jpg);
+    background-size: cover;
+    padding: 5rem 0;
+    z-index: 1;
+    overflow: hidden;
+    .col-md-2{
+        display: flex;
+        flex-direction: column;
+        h2{
+            color: white;
+            font-size: 1.5rem;
+            padding-top: .3rem;
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+            font-size: .9rem;
+            &:hover{
+                color: white;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+    .col-12{
+        color: gray;
+        padding-top: 1rem;
+        .blue_link{
+            color: $brandColor;
+        }
+        p{
+            width: 50%;
+            font-size: .8rem;
+        }
+    }
+    .logo_footer{
+        background-image: url(../../img/dc-logo-bg.png);
+        z-index: 5;
+        height: 35rem;
+        width: 40rem;
+        top: -3rem;
+        background-repeat: no-repeat;
+        right: 0;
+        background-size: cover;
+    }
+}
+// parte finale footer con login e follow
+.log_in{
+    background-color:#303030;
+    padding: 2rem 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .sing_up{
+            div{
+                border: 1px solid $brandColor;
+                padding: 1rem;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+        .follow_us{
+            display: flex;
+            align-items: center;
+            a{
+                color: $brandColor;
+                text-decoration: none;
+            }
+            img{
+                padding-left: 1rem;
+            }
+        }
+    }
+}
+// utility////////////////////////////////////////////
+.brand_bk{
+    background-color: $brandColor;
+    color: white;
+}
+.blue_text{
+    color: #003F5E;
+}
+.gray_container{
+    background-color: #F6F6F6;
+}
