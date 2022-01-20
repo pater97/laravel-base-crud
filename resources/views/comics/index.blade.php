@@ -21,12 +21,13 @@
                         </h5>
                     </div>
                 </a>
+                <a href="{{route('comics.edit', $comic->id)}}">modifica</a>
                 </div>
                 @endforeach
             </div>
         </div>
         <!-- bottone "load more" -->
-        <div class="d-flex justify-content-center pb-5">
+        <div class="d-flex justify-content-around  pb-5">
             <div class="button brand_bk py-2 px-4 fw-bold">
                 LOAD MORE
             </div>
