@@ -29,6 +29,11 @@
             <h1 class="blue_text">
                 {{$comic->title}}
             </h1>
+            @if (session('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+            @endif
             <div class="green_bar">
                 <div class="col-9">
                         <h5 class="px-3">

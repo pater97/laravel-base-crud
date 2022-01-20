@@ -97,6 +97,13 @@ body{
                     transition: all .5s;
                 }
             }
+            .button_card{
+                width: 100%;
+                .action{
+                    width: 100%;
+                    align-items: center;
+                }
+            }
         }
         .button:hover{
             cursor: pointer;

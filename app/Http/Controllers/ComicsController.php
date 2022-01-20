@@ -36,7 +36,16 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();   //ora abbbiamo inserito i dati in una variabile per poterli usare
+        $data = $request->validate([
+            'title'=>'required|unique:comics',
+            'description' => 'required',
+            'thumb' => 'required',
+            'price'=>'required',
+            'series'=>'required',
+            'sale_date'=>'required',
+            'type'=>'required'
+        ]
+        );   //ora abbbiamo inserito i dati in una variabile per poterli usare
 
         $newComic = new Comic;
         $newComic->title = $data['title'];
@@ -48,7 +57,7 @@ class ComicsController extends Controller
         $newComic->type = $data['type'];
         $newComic->save();
 
-    return redirect()->route('comics.show', $newComic->id);
+    return redirect()->route('comics.show', $newComic->id)->with('message', '🥳 Nuovo post creato con successo!');
     }
 
     /**
@@ -82,10 +91,19 @@ class ComicsController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $data=$request->all();
+        $data = $request->validate([
+            'title'=>'required|unique:comics',
+            'description' => 'required',
+            'thumb' => 'required',
+            'price'=>'required',
+            'series'=>'required',
+            'sale_date'=>'required',
+            'type'=>'required'
+        ]
+        );  
 
         $comic->update($data);
-        return redirect()->route('comics.show',$comic->id);
+        return redirect()->route('comics.show',$comic->id)->with('message', '🥳 Complimenti hai modificato il post');
     }
 
     /**
@@ -97,6 +115,6 @@ class ComicsController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('message', '😱 Hai rimosso un post per sempre!! Sei fregato!');
     }
 }

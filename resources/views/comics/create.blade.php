@@ -10,7 +10,7 @@
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" name="title" id="title" class="form-control" placeholder="Type your title here" aria-describedby="titleHelper" required>
+            <input type="text"  name="title" id="title" class="form-control" placeholder="Type your title here" aria-describedby="titleHelper" required>
             <small id="titleHelper" class="text-muted">Type a title for your post. max: 250</small>
         </div>
 

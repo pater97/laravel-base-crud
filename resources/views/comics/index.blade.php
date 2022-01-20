@@ -9,45 +9,57 @@
             <div class="current_series brand_bk">
                 CURRENT SERIES
             </div>
+
+            @if (session('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+            @endif
             <!-- contenirore cards -->
             <div class="row g-4">
                 @foreach($comics as $comic)
                 <div class="col-md-2">
-                    <a href="{{route('comics.show',$comic->id)}}" class="text-decoration-none">
                     <div class="card">
-                        <img src="{{$comic->thumb}}" alt="">
+                        <img class="thumb_image" src="{{$comic->thumb}}" alt="">
                         <h5>
                             {{strtoupper($comic->series)}}
                         </h5>
                     </div>
-                </a>
-                <a href="{{route('comics.edit', $comic->id)}}">modifica</a>
-                {{-- modal --}}
-                <div class="modal fade" id="delete{{$comic->id}}" tabindex="-1" role="dialog" aria-labelledby="modal-{{$comic->id}}" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Delete comic {{$comic->title}}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>
-                                    ⚡ Attenzione questa operazione non puo essere annullata!
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <form action="{{route('comics.destroy', $comic->id)}}" method="post">
-                                    @csrf
-                                    @method('DELETE')
-
-                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                </form>
+                    <div class="button_card d-flex justify-content-around">
+                        <div class="action py-3 d-flex justify-content-around">
+                            <a href="{{route('comics.show',$comic->id)}}" title="guarda dettagli" class="text-decoration-none"><i class="fas fa-eye"></i>
+                            </a>
+                            <a href="{{route('comics.edit', $comic->id)}}" title="modifica"><i class="fas fa-pencil-alt"></i></a>
+                            <button type="button" class="btn btn-danger" title="elimina" data-bs-toggle="modal" data-bs-target="#delete{{$comic->id}}">
+                                <i class="fas fa-trash"></i>
+                            </button>    
+                        </div>
+                        {{-- modal --}}
+                        <div class="modal fade hidden_modal" id="delete{{$comic->id}}" tabindex="-1" role="dialog" aria-labelledby="modal-{{$comic->id}}" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Delete comic {{$comic->title}}</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            ⚡ Attenzione questa operazione non puo essere annullata!
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+        
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
                 </div>
                 @endforeach
             </div>

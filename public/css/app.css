@@ -11326,6 +11326,13 @@ body {
   transform: scale(105%);
   transition: all 0.5s;
 }
+#site_main .homepage .card_section .card_container .button_card {
+  width: 100%;
+}
+#site_main .homepage .card_section .card_container .button_card .action {
+  width: 100%;
+  align-items: center;
+}
 #site_main .homepage .card_section .button:hover {
   cursor: pointer;
   background-color: white;
