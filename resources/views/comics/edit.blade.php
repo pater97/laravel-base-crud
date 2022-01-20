@@ -17,7 +17,7 @@
 
         <div class="mb-3">
             <label for="description" class="form-label">description</label>
-            <input type="text" class="form-control" value="{{$comic->description}}" name="description" id="description" rows="3">
+            <textarea type="text" class="form-control" name="description" id="description" rows="3">{{$comic->description}}</textarea>
         </div>
 
         <div class="mb-3">
