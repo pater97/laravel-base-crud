@@ -22,6 +22,12 @@
                     </div>
                 </a>
                 <a href="{{route('comics.edit', $comic->id)}}">modifica</a>
+                <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+     
+                 <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
                 </div>
                 @endforeach
             </div>
